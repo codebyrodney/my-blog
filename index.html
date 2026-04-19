@@ -1,0 +1,109 @@
+---
+layout: base.html
+title: Home
+---
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <p class="hero-eyebrow">Tech & Coding Blog</p>
+  <h1 class="hero-title">Code. Learn.<br><em>Share.</em></h1>
+  <p class="hero-desc">A magazine for developers — deep dives into HTML, CSS, JavaScript and everything in between.</p>
+</section>
+
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="marquee-dot"></span>HTML</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>CSS</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>JavaScript</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Web Design</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Frontend Dev</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Animations</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Performance</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>HTML</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>CSS</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>JavaScript</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Web Design</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Frontend Dev</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Animations</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Performance</div>
+  </div>
+</div>
+
+<section class="featured-section reveal">
+  <div class="section-label">Featured Article</div>
+  <a href="/posts/first-post/" class="featured-card">
+    <div>
+      <span class="featured-tag">CSS &nbsp;·&nbsp; 5 min read</span>
+      <h2 class="featured-title">The Art of <em>CSS Animations</em> Done Right</h2>
+      <p class="featured-desc">Most developers reach for JavaScript when they want motion. But CSS animations — used with intention — are faster, smoother and far more elegant.</p>
+      <p class="featured-meta">Rodney &nbsp;·&nbsp; April 2025</p>
+      <br/>
+      <span class="read-more">Read Article →</span>
+    </div>
+    <div class="featured-visual">
+      <span class="featured-num">01</span>
+    </div>
+  </a>
+</section>
+
+<section class="posts-section reveal">
+  <div class="section-label">All Articles</div>
+  <div class="posts-grid">
+    <a href="/posts/first-post/" class="post-card">
+      <span class="post-num">01</span>
+      <span class="post-tag">CSS</span>
+      <h3 class="post-title">The Art of CSS Animations Done Right</h3>
+      <p class="post-excerpt">Most developers reach for JavaScript when they want motion. But CSS animations are faster and smoother.</p>
+      <span class="post-meta">April 2025 &nbsp;·&nbsp; 5 min read</span>
+    </a>
+    <a href="#" class="post-card">
+      <span class="post-num">02</span>
+      <span class="post-tag">JavaScript</span>
+      <h3 class="post-title">Understanding the Event Loop Once and For All</h3>
+      <p class="post-excerpt">The event loop is the heart of JavaScript. Once you truly get it, async code will never confuse you again.</p>
+      <span class="post-meta">Coming Soon &nbsp;·&nbsp; 7 min read</span>
+    </a>
+    <a href="#" class="post-card">
+      <span class="post-num">03</span>
+      <span class="post-tag">HTML</span>
+      <h3 class="post-title">Semantic HTML is Your Best SEO Tool</h3>
+      <p class="post-excerpt">Most developers ignore semantic HTML. Here's why that's a mistake and how to fix it in under an hour.</p>
+      <span class="post-meta">Coming Soon &nbsp;·&nbsp; 4 min read</span>
+    </a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-inner reveal">
+    <div class="about-label">About Me</div>
+    <h2 class="about-heading">Hi, I'm <em>Rodney</em></h2>
+    <p class="about-text">I'm a frontend developer with a passion for crafting beautiful, performant web experiences using HTML, CSS and JavaScript. This blog is where I share everything I learn along the way.</p>
+    <div class="skills">
+      <span class="skill-tag">HTML</span>
+      <span class="skill-tag">CSS</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">Animations</span>
+      <span class="skill-tag">Responsive Design</span>
+      <span class="skill-tag">11ty</span>
+      <span class="skill-tag">Git</span>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter reveal">
+  <h2 class="newsletter-heading">Stay in the <em>loop</em></h2>
+  <p class="newsletter-sub">New articles on HTML, CSS and JS — straight to your inbox.</p>
+  <div class="email-row">
+    <input class="email-input" type="email" placeholder="your@email.com"/>
+    <button class="email-submit">Subscribe</button>
+  </div>
+</section>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
